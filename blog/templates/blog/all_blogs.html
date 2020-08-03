@@ -1,10 +1,29 @@
-<h1> blog </h1>
+{% extends 'portfolio/base.html' %} <!-- gdzie się odwołujemy -->
+
+{% block content %}
+
+<h1 id="blogtitle" class="font-weight-bold text-center"> All about cakes</h1>
+
+
+
+
 
 {% for blog in blogs %}
+<div class="row justify-content-center mb-3">
+  <div class="col-6 col-md-4">
 
- 
-<h2>{{ blog.title }}</h2>
-<h2>{{ blog.date }}</h2>
-<p>{{ blog.description }}<p>
-   
+	  <img src="{{ blog.image.url }}" width=100%>
+  </div>
+  <div class="col-6 col-md-4">
+    <a href="{% url 'blog:detail' blog.id %}">
+      <h4>{{ blog.title }}</42> <!-- odwołanie do aplikacji blog, bo na danej strone może być więcej aplikacji-->
+    </a>
+    <h5 class="text-muted">{{ blog.date}}</h5>
+  
+    <h4>{{ blog.description|safe|truncatechars:100 }}</h4> <!-- ilość znaków opisu -->
+  </div>
+</div>
 {% endfor %}
+   
+
+{% endblock %}

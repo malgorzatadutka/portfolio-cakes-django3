@@ -1,0 +1,34 @@
+.navbar-nav .nav-link {
+    color: rgba(0,0,0,1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgba(0,0,0,.5) !important;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+}
+
+#blogtitle {
+    font-size: 6rem;
+}
+#opis {
+        font-size: 2rem;
+    }
+#wpis {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+#opis2 {
+        font-size: 1rem;
+    }
+
+@media (min-width: 992px) {
+    #hometext {
+        font-size: 4rem;
+    }
+    #blogdetailtitle {
+        font-size: 5rem;
+    }
+}
